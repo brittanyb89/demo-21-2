@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import formatDateTime from "../format-date-time.js";
+import { formatCurrentDateTime } from "../utils.js";
 import CommentSchema from "./comment-schema.js";
 
 export const ThoughtSchema = new Schema(
@@ -18,7 +18,7 @@ export const ThoughtSchema = new Schema(
     createdAt: {
       type: Date,
       get(timestamp) {
-        return formatDateTime(timestamp);
+        return formatCurrentDateTime(timestamp);
       },
     },
     comments: [CommentSchema],

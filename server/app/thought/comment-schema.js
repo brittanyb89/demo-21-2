@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import formatCurrentDateTime from "../format-date-time.js";
+import { formatCurrentDateTime } from "../utils.js";
 
 const CommentSchema = new Schema(
   {
