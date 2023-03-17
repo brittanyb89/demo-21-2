@@ -33,7 +33,7 @@ async function init() {
   // Modified server startup
   await new Promise((resolve) => httpServer.listen({ port }, resolve));
 
-  console.info(`🚀 Server ready at http://localhost/${port}`);
+  console.info(`🚀 Server ready at http://localhost:${port}`);
 }
 
 export default init;
